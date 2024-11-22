@@ -39,7 +39,12 @@ public class CustomerStepsDefinitions {
     public void que_tenho_os_dados_de_um_novo_cliente() {
         request = given()
                 .contentType("application/json")
-                .body("{\"name\":\"João Silva\",\"email\":\"joao.silva@example.com\",\"phone\":\"123456789\",\"address\":\"Rua A, 123\"}");
+                .body(
+                        "{" + "\"name\":\"João Silva\"," +
+                        "\"email\":\"joao.silva@example.com\"," +
+                        "\"phone\":\"123456789\"" +
+                        ",\"address\":\"Rua A, 123\"}"
+                );
 
         mockCustomer = new Customer();
         mockCustomer.setId(1L);
